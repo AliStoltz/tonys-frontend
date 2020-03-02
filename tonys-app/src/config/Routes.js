@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { directive } from '@babel/types';
 
-export default ({}) => (
+
+export default ({currentUser, setCurrentUser}) => (
   <div className="routes">
     <Switch>
-      <Route />
+      <Route exact path='/' render={() => <Landing currentUser={currentUser} /> } />
     </Switch>
   </div>
 );
